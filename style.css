@@ -1,0 +1,213 @@
+body{
+	background-color: #4ae927;
+    
+}
+
+
+#container{
+    margin: 100px 0
+}
+
+#button4{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    padding: 15px 40px;
+    position: relative;
+    cursor: pointer;
+    user-select: none; 
+    border-radius: 5px;
+    background-color: rgb(192, 227, 255);
+    transition: all 0.2s ease-in-out;
+}
+#button4:hover{
+    box-shadow: 0 0 30px 0 rgb(84, 89, 215);
+}
+
+#verius{
+    
+    background-color: rgb(102, 175, 234);
+    transition: all 0.2s ease-in-out;
+}
+#verius:hover{
+    box-shadow: 0 0 30px 0 rgb(206, 37, 31);
+}
+
+
+
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+#menu {
+	width: 100%;
+	height: 70px;
+	background-color: #007F0E;
+	display: flex;
+	align-items: center;
+}
+#logo {
+	height: 75%;
+	margin-left: 10px;
+}
+
+
+#sezioni {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: 10px;
+}
+.sezione {
+	width: 100px;
+	height: 30px;
+	background-color: white;
+	border-radius: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+	color: black;
+    font-family: "Roboto", sans-serif;
+}
+.sezione:hover {
+	background-color: #42dd3d;
+}
+#corrente {
+	box-shadow: 0 6px 0 #11560c;
+}
+#iconmenu {
+	width: 30px;
+	cursor: pointer;
+	margin-right: 20px;
+	display: none;
+}
+
+@media only screen and (max-width: 800px) {
+	#iconmenu {
+		display: block;
+	}
+	.sezione {
+		display: none;
+	}
+}
+
+#mobile_menu {
+	width: 0%;
+	height: 100%;
+	background-color: #007F0E;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+.sezione_mobile {
+	
+	display: flex;
+	display:block;
+    width:150px;
+    height:150px;
+    line-height:150px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: #343b99;
+    box-shadow: 0 0 3px #343b99;
+    font-size:20px;
+    font-weight:bold;
+
+}
+.sezione_mobile:hover {
+	background-color: #4ae927;
+}
+#corrente_mobile {
+	box-shadow: 0 6px 0 #11560c;
+}
+
+
+.btn {
+	padding: 0.9em 1.6em;
+	border: none;
+	outline: none;
+	color: #FFF;
+	
+	font-weight: 1000;
+	font-size: 17px;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 12px;
+	font-weight:bold;
+	display: flex;
+	display:block;
+	font-size:23px;
+	
+   }
+   
+   .btn::after {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #007F0E;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+   }
+   /* glow */
+   .btn::before {
+	content: "";
+	background: linear-gradient(
+	   45deg,
+	   #FF0000, #002BFF, #FF00C8, #002BFF,
+		 #FF0000, #002BFF, #FF00C8, #002BFF
+   );
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 600%;
+	z-index: -1;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	filter: blur(8px);
+	animation: glowing 20s linear infinite;
+	transition: opacity .3s ease-in-out;
+	border-radius: 10px;
+	opacity: 0;
+   }
+   
+   @keyframes glowing {
+	0% {
+	 background-position: 0 0;
+	}
+   
+	50% {
+	 background-position: 400% 0;
+	}
+   
+	100% {
+	 background-position: 0 0;
+	}
+   }
+   
+   /* hover */
+   .btn:hover::before {
+	opacity: 1;
+   }
+   
+   .btn:active:after {
+	background: transparent;
+   }
+   
+   .btn:active {
+	color: #000;
+	font-weight: bold;
+   }
